@@ -2,6 +2,7 @@ import './App.css'
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Nav from './components/Nav';
+import 'rsuite/dist/rsuite.min.css';
 function App() {
 
 
