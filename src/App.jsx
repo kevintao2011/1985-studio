@@ -7,7 +7,7 @@ function App() {
 
 
   return (
-    <div className="">
+    <div className="min-w-[1080px]">
       <BrowserRouter basename='/'>
         <Routes>
           <Route path="/" element={<Nav />}>
