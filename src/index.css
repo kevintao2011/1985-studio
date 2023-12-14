@@ -17,13 +17,13 @@
 } */
 
 .slide-in {
-  animation: slide-in 0.5s forwards,fadeIn 0s 0.5s normal forwards;
-  -webkit-animation: slide-in 0.5s forwards,fadeIn 0s 0.5s normal forwards;
+  animation: slide-in 0.5s forwards,fadeIn 0.5s linear normal forwards;
+  -webkit-animation: slide-in 0.5s forwards,fadeIn 0.5s linear normal forwards;
 }
 
 .slide-out {
-  animation: slide-out 0.5s forwards, fadeOut 0s 0.5s normal forwards;
-  -webkit-animation: slide-out 0.5s forwards, fadeOut 0s 0.5s normal forwards;
+  animation: slide-out 0.5s forwards, fadeOut 0.5ss linear  normal forwards;
+  -webkit-animation: slide-out 0.5s forwards, fadeOut 0.5s linear  normal forwards;
 }
 
 .visible {

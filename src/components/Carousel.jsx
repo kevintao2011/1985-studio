@@ -28,7 +28,8 @@ export default function Carousel({Intervalms=3000,ratio=3/1,ImgUrls=[],Title,Des
     
   return (
     <div className="parent relative ">
-        <div className=" flex flex-row justify-center">
+        
+        <div className=" flex flex-row justify-center z-0">
             <div className="w-full inline-flex flex-row overflow-scroll ">
 
                 <div className="w-full" style={{aspectRatio:ratio}}>
@@ -51,7 +52,7 @@ export default function Carousel({Intervalms=3000,ratio=3/1,ImgUrls=[],Title,Des
                 
                 {
                     Title!==undefined&&(
-                        <div className="w-full h-full overlaytxt absolute top-0 border-red-200 border-2   ">
+                        <div className="w-full h-full overlaytxt absolute top-0  ">
                             {
                                 
                                 <div className={`flex ${PositionMap[Position]}`}>
