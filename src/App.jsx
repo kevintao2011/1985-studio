@@ -1,21 +1,35 @@
 import './App.css'
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { BrowserRouter,Routes,Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Nav from './components/Nav';
 import 'rsuite/dist/rsuite.min.css';
+import VenueRentalPage from './pages/VenueRentalPage';
+import Studio from './pages/Studio';
+import Footer from './components/Footer';
+import Garment from './pages/Garment';
 function App() {
 
 
   return (
-    <div className="min-w-[1080px]">
+<div className="min-w-[1080px] ">
+
       <BrowserRouter basename='/'>
-        <Routes>
-          <Route path="/" element={<Nav />}>
-            <Route index element={<Home />} /> 
-          </Route>
-          
-        </Routes>
+        <Nav />
+          <Routes>
+            <Route exact path="/" element={<Home />} > 
+              
+            </Route>
+
+            <Route path="1985-Studio" element={<Studio/>}>
+              <Route path="VenueRental" element={<VenueRentalPage/>} />
+            </Route>
+            
+            <Route path="1985-Garment-Factory" element={<Garment/>} />
+            
+          </Routes>
+        <Footer/>
       </BrowserRouter>
+
     </div>
   )
 }

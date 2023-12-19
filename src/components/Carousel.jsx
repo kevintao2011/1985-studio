@@ -1,6 +1,6 @@
 import { Children, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-export default function Carousel({Intervalms=3000,ratio=3/1,ImgUrls=[],Title,Description,link,navText,Position="top",TitlePosition="left"}) {
+export default function Carousel({Intervalms=3000,ratio=3/1,ImgUrls=[],Title,Description,navText,Position="top",TitlePosition="left",onNav,blockbg=true,children}) {
     const [newsCounter, setnewsCounter] = useState(0)
     const TextPositionMap = {
         left:'text-start self-start',
@@ -50,21 +50,25 @@ export default function Carousel({Intervalms=3000,ratio=3/1,ImgUrls=[],Title,Des
                     )}
                 </div>
                 
+                
                 {
-                    Title!==undefined&&(
+                    children?(
+                        <div className="w-full h-full overlaytxt absolute top-0 ">{children}</div>
+                    ):(
+                        Title!==undefined&&(
                         <div className="w-full h-full overlaytxt absolute top-0  ">
                             {
                                 
                                 <div className={`flex ${PositionMap[Position]}`}>
-                                    <div className={`${TextPositionMap[TitlePosition]?TextPositionMap[TitlePosition]:'text-start self-start'} m-5 w-8/12 bg-opacity-50 bg-gray-700 p-4 rounded-lg drop-shadow-md flex flex-col gap-5`}>
-                                        <div className="text-5xl text-white ">
+                                    <div className={`${TextPositionMap[TitlePosition]?TextPositionMap[TitlePosition]:'text-start self-start'} m-5 w-8/12 bg-opacity-50 ${blockbg?"bg-gray-700":""} p-4 rounded-lg drop-shadow-md flex flex-col `}>
+                                        <div className="2xl:text-5xl md:text-3xl text-xl text-white mb-4">
                                             {Title}
                                         </div>
-                                        <pre className="w-full whitespace-normal text-white text-lg">
+                                        <pre className="w-full whitespace-normal text-white 2xl:text-lg text-sm">
                                             {Description}
                                         </pre>
                                         <div className="text-end p-10">
-                                            <button className={`text-lg rounded-md p-2 bg-transparent font-bold text-gray-200 hover:text-white bg-opacity-20 bg-gray-400 ${TextPositionMap[TitlePosition]?TextPositionMap[TitlePosition]:'text-start self-start'}`}>
+                                            <button className={`text-lg rounded-md p-2 bg-transparent font-bold text-gray-200 hover:text-white bg-opacity-20 bg-gray-400 ${TextPositionMap[TitlePosition]?TextPositionMap[TitlePosition]:'text-start self-start'}`} onClick={()=>{onNav()}}>
                                                 <div className="">{navText}</div>
                                             </button>
                                         </div>
@@ -82,8 +86,8 @@ export default function Carousel({Intervalms=3000,ratio=3/1,ImgUrls=[],Title,Des
                             
                         </div>
                     )
+                    )
                 }
-                
                 
                 
             </div>
@@ -101,7 +105,11 @@ Carousel.propTypes = {
     Position:PropTypes.string,
     Description:PropTypes.string,
     navText:PropTypes.string,
-    link:PropTypes.string
+    link:PropTypes.string,
+    onNav:PropTypes.func,
+    blockbg:PropTypes.bool,
+    children:PropTypes.object,
+    
 }
 
 // export default Carousel
