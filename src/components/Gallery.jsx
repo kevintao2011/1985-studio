@@ -13,16 +13,30 @@ const sampleArray = [
     {label:"獨立廁所",url:"/assets/5F/table.jpg ",chinese_description:"this is a photo"},
     // {label:"飲水機",url:"/assets/5F/water_machine.jpg ",chinese_description:"this is a photo"},
 ]
-export default function Gallery({labelImageUrlArray=sampleArray,Title="Title",reversed=false,photoRatio=4/3}) {
+export default function Gallery({labelImageUrlArray=sampleArray,Title="Title",reversed=false,photoRatio=4/3,NavLink}) {
     
     const [ActivePhotoIndex, setActivePhotoIndex] = useState(0)
     return (
         <div className={`w-full flex ${reversed?"flex-row-reverse":"flex-row"}  bg-transparent`}>
             <div className="img-container w-8/12 max-w-[1200px]" >
                 <div className="relative w-full ">
-                    <div className="flex flex-row justify-center items-center">
-                        <img  src={labelImageUrlArray[ActivePhotoIndex].url} alt="" className='object-cover' style={{aspectRatio:photoRatio}}/>
-                    </div>
+                    {/* {
+                        NavLink?(
+                            <div className="flex flex-row justify-center items-center">
+                                <img  src={labelImageUrlArray[ActivePhotoIndex].url} alt="" className='object-cover' style={{aspectRatio:photoRatio}}/>
+                            </div>
+                        )
+                        :(
+                            
+                            
+                        )
+                    } */}
+                    <a href={NavLink} className='flex flex-row justify-center items-center' style={{pointerEvents:NavLink?"":"none"}}>
+                        <div className="flex flex-row justify-center items-center">
+                            <img  src={labelImageUrlArray[ActivePhotoIndex].url} alt="" className='object-cover' style={{aspectRatio:photoRatio}}/>
+                        </div>
+                    </a>
+                    
                     {
                         labelImageUrlArray.length>1&&(
                             <div className="absolute w-full bottom-2 ">
@@ -64,5 +78,6 @@ Gallery.propTypes = {
     labelImageUrlArray:PropTypes.array,
     Title:PropTypes.string,
     reversed:PropTypes.bool,
+    NavLink:PropTypes.string,
     photoRatio:PropTypes.number,
 }

@@ -7,6 +7,7 @@ import VenueRentalPage from './pages/VenueRentalPage';
 import Studio from './pages/Studio';
 import Footer from './components/Footer';
 import Garment from './pages/Garment';
+import AboutUs from './pages/AboutUs';
 function App() {
 
 
@@ -25,7 +26,7 @@ function App() {
             </Route>
             
             <Route path="1985-Garment-Factory" element={<Garment/>} />
-            
+            <Route path="About-Us" element={<AboutUs/>} />
           </Routes>
         <Footer/>
       </BrowserRouter>

@@ -11,18 +11,18 @@ const Features = [
   {
     svg:<MediaIcon style={{ fontSize: "5rem"
 }}/>,
-    title:"場地大小",
-    description:"面積達2400平方呎,適合舉辦各種中小型活動。採取自然光 "
+    title:"多功能活動空間",
+    description:"分別設有2400尺、700尺及、300尺全層場地"
   },
-  {svg:<EventDetailIcon style={{ fontSize: "5rem"}}/>,title:"齊全影音系統",description:"設有投影機及音響系統，適合用作會議"},
+  {svg:<EventDetailIcon style={{ fontSize: "5rem"}}/>,title:"專業影音系統",description:"設有投影機、大電視、專業音響系統，可自備電腦連接"},
   {svg:<MediaIcon style={{ fontSize: "5rem"
-}}/>,title:"設有戶外休憩空間",description:"設有露臺休憩空間,可以在活動期間"},
-  {svg:<EventDetailIcon style={{ fontSize: "5rem"}}/>,title:"24小時開放",description:"24小時可供租用,更設有FoodPanda 免運費優惠"},
+}}/>,title:"戶外空間",description:"2400尺場地配有露台休憩空間"},
+  {svg:<EventDetailIcon style={{ fontSize: "5rem"}}/>,title:"24小時開放",description:"全年無休，可連續預訂數天"},
 ]
 
 const EquipArray = [
   {label:"座檯咪x2",url:"/assets/5F/table_mic.jpg ",chinese_description:"座檯咪,可在"},
-  {label:"手持無線咪x6",url:"/assets/5F/table_mic.jpg ",chinese_description:"手持無線咪,可同時使用"},
+  {label:"手持無線咪x6",url:"/assets/5F/mic.jpg ",chinese_description:"手持無線咪,可同時使用"},
   {label:"混音器x1",url:"/assets/5F/mixer.jpg ",chinese_description:"混音器連接音響系統與投影機,可連接電腦/電話輸出"},
   {label:"鏡牆",url:"/assets/5F/mirror.jpg ",chinese_description:"this is a photo"},
   {label:"投映機",url:"/assets/5F/projector.jpg ",chinese_description:"連接音響系統,可連接電腦/電話輸出"},
@@ -35,33 +35,33 @@ const EquipArray = [
 
 const ActivitiesArray = [
   {label:"多謝你唱廣東歌問答比賽",url:"/assets/5F/叱吒.jpg ",chinese_description:"容納40位觀眾的拍攝節目"},
-  {label:"Conday",url:"/assets/5F/5FCover.jpg ",chinese_description:"容納40位觀眾以及同時使用"},
-  {label:"自修室",url:"/assets/5F/self_study.jpg ",chinese_description:"手持無線咪,可同時使用"},
-  {label:"香港城市大學學生會音樂學會歌唱比賽",url:"/assets/5F/singcon.jpg ",chinese_description:"手持無線咪,可同時使用"},
-  {label:"Scrabble 比賽",url:"/assets/5F/scrabble.jpg ",chinese_description:"手持無線咪,可同時使用"},
+  {label:"Conday",url:"/assets/5F/5FCover.jpg ",chinese_description:"二十四小時開放，可容納超過50名觀眾"},
+  {label:"自修室",url:"/assets/5F/self_study.jpg ",chinese_description:"設有多個充電位置，自然光十分充足"},
+  {label:"香港城市大學學生會音樂學會歌唱比賽",url:"/assets/5F/singcon.jpg ",chinese_description:"專業音響設備，以及穩定Wi-Fi直播比賽  "},
+  {label:"Scrabble 比賽",url:"/assets/5F/scrabble.jpg ",chinese_description:"全層單位可提供高私隱及靈靜環境進行比賽"},
 ]
 
 const AcitvitySuggestions = [
   {
     svg:<MediaIcon style={{ fontSize: "5rem"
 }}/>,
-    title:"中小型講座",
-    description:"面積達2400平方呎,適合舉辦各種中小型活動。採取自然光 "
+    title:"中小型講座/商務會議 Business Meeting/Seminar",
+    description:"最多可容納80人，落地大玻璃，自然光充足 Capable of accommodating up to 80 people, the venue features large floor-to-ceiling windows that allow ample natural light"
   },
   {
     svg:<EventDetailIcon style={{ fontSize: "5rem"}}/>,
-    title:"小型比賽/考試",
-    description:"設有投影機及音響系統，適合用作會議"
+    title:"派對/ 小型音樂會/演出",
+    description:"配有專業音響設備，另有譜架、咪架等設備免費借用 Equipped with professional sound systems and complimentary equipment such as music stands and microphone stands"
   },
   {
     svg:<MediaIcon style={{ fontSize: "5rem"}}/>,
-    title:"團體活動",
-    description:"設有露臺休憩空間,可以在活動期間"
+    title:"培訓/團隊建設活動",
+    description:"配有不同專業設備，及室內外場地 Equipped with various professional facilities and both indoor and outdoor spaces"
   },
   {
     svg:<EventDetailIcon style={{ fontSize: "5rem"}}/>,
-    title:"24小時開放",
-    description:"24小時可供租用,更設有FoodPanda 免運費優惠"
+    title:"跳舞活動/話劇排練",
+    description:"配九米長鏡牆及專業音響，適合多人訓練 Featuring a 9m-long mirrored wall and professional sound systems, suitable for group training."
   },
 ]
 
@@ -79,7 +79,7 @@ export default function Studio() {
     <div className="w-screen flex flex-col">
       <div className="">
         <Carousel
-          Title={"5樓場地"}
+          Title={"場地介紹"}
           Position="mid"
           TitlePosition="mid"
           blockbg={false}
