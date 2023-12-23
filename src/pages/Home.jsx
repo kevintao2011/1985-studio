@@ -36,7 +36,7 @@ function Home() {
     )
 
     return (
-        <div className="h-full flex flex-col relative">
+        <div className="h-full flex flex-col relative bg-theme-gray">
             <div className="flex flex-col z-0 max-w-[3840px] ">
                 
                 {/* <div className="w-1/2 self-center">

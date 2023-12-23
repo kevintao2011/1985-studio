@@ -76,7 +76,7 @@ export default function Studio() {
       ]
   )
   return (
-    <div className="w-screen flex flex-col">
+    <div className=" flex flex-col">
       <div className="">
         <Carousel
           Title={"場地介紹"}

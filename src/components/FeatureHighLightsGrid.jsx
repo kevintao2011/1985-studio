@@ -19,7 +19,7 @@ export default function FeatureHighLightsGrid({features=Features,title="特色 F
         {/* min-h-[400px] */}
         <div className="p-5 flex flex-col gap-5 max-w-[2048px] "> 
         <div className="text-xl font-bold text-start">{title}</div>
-        <div className="grid grid-cols-4 gap-5 ">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 ">
             {
             features.map(feature=>{
                 return(

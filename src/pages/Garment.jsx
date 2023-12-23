@@ -2,7 +2,7 @@ import Gallery from "../components/Gallery";
 
 
 const WearArray = [
-    {label:"9 Wear",url:"/assets/Garment/9Wear/9wear.png ",chinese_description:`全新9Wear 系列
+    {label:"9 Wear",url:"/assets/Garment/9Wear/9wear.jpg ",chinese_description:`全新9Wear 系列
     老細：「下個月出T-Shirt Product，我諗左Logo Tee 喇，你同我諗多樣」
     小編：「err…咁出隻城大學生會新色Tee啦」
     老細：「有冇啲咩新意呀，請你翻嚟係要Idea唔係要 Ikea 賣嚟賣去都係果啲野」（老細真係好Fun)
@@ -17,7 +17,7 @@ const WearArray = [
     👦🏻男仔出面加件恤衫
     👧🏻女仔著條短牛仔褲或者當oversized就Fit晒`}]
 const CapArray = [
-{label:"9 Wear",url:"/assets/Garment/Cap/CityCap.png ",
+{label:"1985 Cap",url:"/assets/Garment/Cap/CityCap.png ",
 chinese_description:`🧢1985 Cap帽
 有時咁大太陽真係眼都擘唔大👀
 戴住我哋嘅Cap帽就可以遮住咁猛嘅太陽喇☀
